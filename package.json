@@ -1,0 +1,44 @@
+{
+  "name": "agentomy-agent",
+  "version": "0.2.0",
+  "description": "Governed agent framework for enterprise AI. Add governance to any AI agent in 4 lines of code.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "author": "Agentomy <governance@agentomy.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getagentomy/agentomy-agent.git"
+  },
+  "keywords": [
+    "ai-governance",
+    "agent-governance",
+    "ai-agents",
+    "governance",
+    "audit-trail",
+    "compliance",
+    "eu-ai-act",
+    "governancebench"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "agent.md",
+    "dist",
+    "LICENSE",
+    "README.md",
+    "!**/AGENTS.md"
+  ],
+  "homepage": "https://github.com/getagentomy/agentomy-agent",
+  "bugs": {
+    "url": "https://github.com/getagentomy/agentomy-agent/issues"
+  }
+}

@@ -1,0 +1,34 @@
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+Copyright (C) 2026 Agentomy
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+---
+
+Additional terms for Agentomy (per AGPL Section 7):
+
+1. Attribution: Modified versions must include prominent notice that
+   the software was derived from Agentomy, with a link to the original
+   repository.
+
+2. GovernanceBench and VIGIL benchmarking tools (cli/governancebench/
+   and cli/vigil/) are separately licensed under the MIT License.
+   See their respective LICENSE files.
+
+3. The Agentomy Agent system prompt (agentomy-agent/)
+   is separately licensed under the MIT License.
+
+For enterprise licensing options, contact: governance@agentomy.com
