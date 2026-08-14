@@ -1,5 +1,7 @@
 # Agentomy Agent
 
+<sub>An open piece of **[Agentomy](https://agentomy.com)**, the governance layer for AI agents in regulated enterprises. See the others at [github.com/getagentomy](https://github.com/getagentomy).</sub>
+
 Know what your agents are doing. Stop them when you need to. Prove it happened.
 
 ---
