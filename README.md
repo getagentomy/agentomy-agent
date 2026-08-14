@@ -14,11 +14,11 @@ Add a governance peer to any AI agent session. No install. No infrastructure. No
 
 **Step 2.** Copy the full contents into your agent's system prompt (Claude, ChatGPT, any agent runtime that accepts system instructions).
 
-**Step 3.** Run your session. The governance peer observes every action, flags risks in real time, and scores your session against GovernanceBench -- 5 dimensions of what good agent governance looks like.
+**Step 3.** Run your session. The governance peer observes every action, flags risks in real time, and scores your session against GovernanceBench -- 6 dimensions of what good agent governance looks like.
 
 **What you get:** Authorization checks, behavioral integrity monitoring, EU AI Act flag awareness, OWASP Agentic Top 10 coverage assessment, and a scored summary at session end.
 
-**Score:** 2/5 in standalone mode (Authorization + Behavioral Integrity). The other 3 dimensions (Auditability, Override, OWASP Coverage) require the Agentomy infrastructure layer for cryptographic proof.
+**Score:** 3/6 in standalone mode (Authorization, Behavioral Integrity, and Auditability via a tamper-evident hash-chain). The other 3 dimensions (Override, OWASP Coverage, Message Governance) require the Agentomy infrastructure layer.
 
 **Works with:** Any agent that accepts a system prompt. Claude, ChatGPT, Gemini, Hermes, LangChain agents, CrewAI crews, AutoGen teams. If it has a system prompt, it gets a governance peer.
 
@@ -44,14 +44,14 @@ import { GovernancePipeline } from 'agentomy-agent';
 const pipeline = new GovernancePipeline();
 const result = await pipeline.evaluate({ action: 'data_export', agentId: 'my-agent' });
 
-console.log(result.score);      // 2/5 -- Authorization + Audit
+console.log(result.score);      // 3/6 -- Authorization + Behavioral + Audit
 console.log(result.auditTrail); // local SHA-256 hash chain
 console.log(result.mode);       // 'standalone'
 ```
 
-Works immediately. No API keys. No server. No configuration. Real permission enforcement (5-tier model). Real hash-chain audit trail. Your GovernanceBench score: 2/5.
+Works immediately. No API keys. No server. No configuration. Real permission enforcement (5-tier model). Real hash-chain audit trail. Your GovernanceBench score: 3/6.
 
-### Connected Mode (5/5 governance)
+### Connected Mode (6/6 governance)
 
 Connect to the Agentomy platform for the full governance layer -- tamper-evident audit trail, fleet-wide halt, compliance evidence, behavioral monitoring, OWASP coverage.
 
@@ -65,7 +65,7 @@ const pipeline = new GovernancePipeline({
 });
 
 const result = await pipeline.evaluate({ action: 'data_export' });
-console.log(result.score); // 5/5
+console.log(result.score); // 6/6
 ```
 
 ## 12 Governance Modules
@@ -138,7 +138,7 @@ Ships with `.d.ts` type declarations. No additional `@types` package needed.
 
 ## Status
 
-MIT licensed. Standalone mode works immediately (2/5 governance). Full governance (5/5) requires Agentomy platform.
+MIT licensed. Standalone mode works immediately (3/6 governance). Full governance (6/6) requires Agentomy platform.
 
 ## Links
 
