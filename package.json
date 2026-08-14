@@ -1,6 +1,6 @@
 {
   "name": "agentomy-agent",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Governed agent framework for enterprise AI. Add governance to any AI agent in 4 lines of code.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
