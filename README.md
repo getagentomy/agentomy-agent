@@ -79,9 +79,9 @@ console.log(result.mode);       // 'standalone'
 
 Works immediately. No API keys, no server, no configuration. Real permission enforcement (the 5-tier model), a real hash-chain audit trail, and your GovernanceBench score: 3/6.
 
-### Connected Mode (6/6 governance)
+### Connected Mode (graded and proved by the platform)
 
-Connect to the Agentomy platform for the full governance layer: tamper-evident audit trail, fleet-wide halt, compliance evidence, behavioral monitoring, and OWASP coverage.
+Connect to the Agentomy platform (self-hosted or hosted) for the full governance layer: tamper-evident audit trail, fleet-wide halt, compliance evidence, behavioral monitoring, and OWASP coverage.
 
 ```typescript
 import { GovernancePipeline } from 'agentomy-agent';
@@ -93,8 +93,10 @@ const pipeline = new GovernancePipeline({
 });
 
 const result = await pipeline.evaluate({ action: 'data_export' });
-console.log(result.score); // 6/6
+console.log(result.score); // graded by the connected platform, up to 6/6
 ```
+
+The connected score and the evidence behind it come from the platform, not from the local SDK. The standalone agent tops out at 3/6 by design: observation can score and flag, but only the connected infrastructure can enforce and produce proof a third party can independently verify. That is the line between the free tier and the paid tiers.
 
 ---
 
@@ -190,7 +192,7 @@ Used as fallbacks when no config is passed to the constructor. Ships with `.d.ts
 
 ## Honest limits
 
-- **Can it be fooled?** Yes. The peer is a system prompt, not a security perimeter. It flags persona-override attempts, but a sophisticated attacker who knows it exists can design around it. Connected mode addresses this with infrastructure-level enforcement that does not depend on the model reading a prompt correctly.
+- **What the standalone peer does, and does not, do.** The standalone peer is an observation layer, not an enforcement perimeter. Like any control expressed as a system prompt, a determined adversary can attempt to talk it out of its job. That is not a defect to hide; it is the exact reason enforcement that cannot be prompted away belongs one layer down, in infrastructure. Standalone gives you awareness. Connected mode gives you enforcement the model cannot argue with, and cryptographic proof a third party can check. It flags persona-override attempts either way.
 - **Does it slow agents down?** No. It observes; it does not intercept or modify the execution path.
 - **Does a 3/6 mean my governance is bad?** No. A 3/6 is the accurate score for observation without infrastructure. If your use case needs proof, 3/6 is telling you exactly that.
 
