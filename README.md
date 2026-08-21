@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://agentomy.com/agentomy-logo-dark.svg" alt="Agentomy" width="320" />
+  <img src="assets/brand/agentomy-logo-dark.svg" alt="Agentomy" width="320" />
 </div>
 
 # Agentomy Agent
